@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Formulario</string>
+    <string name="hint_edit_mensagem">Digite seu Nome</string>
+    <string name="hint_edit_mensagem1">Digite seu Telefone</string>
+    <string name="hint_edit_mensagem2">Digite seu Endereço</string>
+    <string name="hint_edit_mensagem3">Digite seu Site Social</string>
+    <string name="hint_edit_mensagem4">Digite sua Nota</string>
+    <string name="text_btn_acao">Button 1</string>
+    <string name="text_btn_acao1">Button 2</string>
+
+</resources>
