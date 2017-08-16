@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final EditText editTextNome = (EditText) findViewById(R.id.editTextNome);
@@ -31,11 +31,21 @@ public class MainActivity extends AppCompatActivity {
                 String sitesocial = editTextNome3.getText().toString();
                 String nota = editTextNome4.getText().toString();
 
-                   Toast.makeText(MainActivity.this, "Nome: " + nome +"Endereço:"  +endereco+ "Telefone: "+telefone+ "Site Social:"+sitesocial+" Nota:"+nota, Toast.LENGTH_LONG).show();
+                if(savedInstanceState != null){
+                    Toast.makeText(MainActivity.this, savedInstanceState.getString("chave"), Toast.LENGTH_SHORT).show();
+                }else {
 
+                    Toast.makeText(MainActivity.this, "Nome: " + nome + "Endereço:" + endereco + "Telefone: " + telefone + "Site Social:" + sitesocial + " Nota:" + nota, Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
- }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putString("chave","minha app tratou !");
+        super.onSaveInstanceState(outState);
+    }
+}
 
 

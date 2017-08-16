@@ -7,5 +7,6 @@
     <string name="hint_edit_mensagem4">Digite sua Nota</string>
     <string name="text_btn_acao">Button 1</string>
     <string name="text_btn_acao1">Button 2</string>
+    <string name="text_btn_acao2">Pegar Imagem</string>
 
 </resources>
