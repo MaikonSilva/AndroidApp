@@ -1,5 +1,6 @@
 package br.com.maikonsilva.meuapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText editTextNome3 = (EditText) findViewById(R.id.editTextSiteSocial);
         final EditText editTextNome4 = (EditText) findViewById(R.id.editTextNota);
         final Button btnAcao = (Button) findViewById(R.id.buttonAcao);
+        final Button buttonAcao1 =(Button) findViewById(R.id.buttonAcao1);
 
 
         btnAcao.setOnClickListener(new View.OnClickListener() {
@@ -30,21 +32,26 @@ public class MainActivity extends AppCompatActivity {
                 String endereco = editTextNome2.getText().toString();
                 String sitesocial = editTextNome3.getText().toString();
                 String nota = editTextNome4.getText().toString();
-
-                if(savedInstanceState != null){
-                    Toast.makeText(MainActivity.this, savedInstanceState.getString("chave"), Toast.LENGTH_SHORT).show();
-                }else {
-
                     Toast.makeText(MainActivity.this, "Nome: " + nome + "Endereço:" + endereco + "Telefone: " + telefone + "Site Social:" + sitesocial + " Nota:" + nota, Toast.LENGTH_LONG).show();
-                }
+
             }
         });
-    }
 
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        outState.putString("chave","minha app tratou !");
-        super.onSaveInstanceState(outState);
+        buttonAcao1.setOnClickListener(new View.OnClickListener (){
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(MainActivity.this, PrincipalActivity.class);
+                startActivity(it);
+            //    String nome = editTextNome.getText().toString();
+            //    Intent intent = new Intent(v.getContext(),PrincipalActivity.class);
+            //    Bundle parametros = new Bundle();
+            //    parametros.putString("Passando . . ",nome);
+            //    intent.putExtras(parametros);
+            //    startActivity(intent);
+            }
+
+        });
+
     }
 }
 
