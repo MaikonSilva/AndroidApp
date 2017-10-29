@@ -33,10 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 String sitesocial = editTextNome3.getText().toString();
                 String nota = editTextNome4.getText().toString();
                     Toast.makeText(MainActivity.this, "Nome: "+nome, Toast.LENGTH_LONG).show();
-
             }
         });
-
         buttonAcao1.setOnClickListener(new View.OnClickListener (){
             @Override
             public void onClick(View v) {
