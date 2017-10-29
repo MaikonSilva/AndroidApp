@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 String nota = editTextNome4.getText().toString();
                     Toast.makeText(MainActivity.this, "Nome : "+nome, Toast.LENGTH_LONG).show();
 
+
+
             }
         });
 
