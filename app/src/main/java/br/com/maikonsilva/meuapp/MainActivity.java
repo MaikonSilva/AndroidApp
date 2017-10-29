@@ -32,9 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 String endereco = editTextNome2.getText().toString();
                 String sitesocial = editTextNome3.getText().toString();
                 String nota = editTextNome4.getText().toString();
-                    Toast.makeText(MainActivity.this, "Nome : "+nome, Toast.LENGTH_LONG).show();
-
-
+                    Toast.makeText(MainActivity.this, "Nome do usuario: "+nome, Toast.LENGTH_LONG).show();
 
             }
         });
